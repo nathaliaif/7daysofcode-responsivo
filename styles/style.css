@@ -6,6 +6,9 @@
   --primary-text: #464646;
   --secondary-text: #a3a3a3;
 
+  /* Estados */
+  --primary-hover: #4786f0;
+
   --primary-font: "Montserrat", sans-serif;
 }
 
@@ -19,6 +22,73 @@ body {
   background-color: #f8f4ff;
   font-family: var(--primary-font);
 }
+
+/* Navbar */
+
+.navbar {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.navbar__plus {
+  position: fixed;
+  bottom: 5.7em;
+  left: auto;
+  right: 1.5em;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  filter: drop-shadow(
+    0 0 0.25rem color-mix(in srgb, var(--blue) 50%, transparent)
+  );
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--primary-hover);
+  }
+}
+
+.navbar__plus__icon {
+  height: 1rem;
+}
+
+.navbar__bottom {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--white);
+  width: 100%;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px 15px 0 0;
+  filter: drop-shadow(0 -1mm 1mm rgba(50, 50, 50, 0.1));
+}
+
+.navbar__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.3em;
+
+  color: var(--primary-text);
+  text-decoration: none;
+  font-size: 0.8rem;
+  opacity: 0.3;
+}
+
+.navbar__buttons--active {
+  color: var(--blue);
+  opacity: 1;
+}
+
+/* Header */
 
 .header {
   padding: 3em 1.5em 1em 1.5em;
@@ -44,8 +114,13 @@ body {
   color: var(--secondary-text);
 }
 
+/* Cards Container */
+
 .container {
   padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
 }
 
 .container__day {
@@ -53,9 +128,10 @@ body {
   font-size: 1rem;
 }
 
+/* Card */
+
 .card {
   position: relative;
-  margin-top: 1em;
   padding: 1.2em;
   border-radius: 8px;
   background-color: var(--white);
@@ -152,17 +228,40 @@ body {
   font-size: 0.9rem;
   text-decoration: none;
   font-weight: 500;
-  border: 1.5px solid #ececec;
-  color: var(--primary-text);
   border-radius: 8px;
+  transition: 0.3s;
+}
+
+.card__button--grey {
+  border: 2px solid #ececec;
+  color: var(--primary-text);
+  &:hover {
+    border: 2px solid var(--primary-hover);
+    color: var(--primary-hover);
+  }
 }
 
 .card__button--orange {
   background-color: var(--orange);
+  border: 2px solid var(--orange);
   color: var(--white);
+
+  &:hover {
+    background-color: var(--blue);
+    border: 2px solid var(--blue);
+  }
 }
 
 .card__button--blue {
   background-color: var(--blue);
+  border: none;
   color: var(--white);
+
+  &:hover {
+    background-color: var(--primary-hover);
+  }
+}
+
+.spacer-medium {
+  height: 5rem;
 }
