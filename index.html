@@ -12,14 +12,31 @@
   </head>
   <body>
     <div class="navbar">
-      <a href="" class="navbar__plus">
-        <img
-          src="./assets/img/maisicone.png"
-          alt=""
-          class="navbar__plus__icon"
-        />
-      </a>
-
+      <div class="navbar__float">
+        <div id="navbar__float__menu">
+          <div class="navbar__float__links">
+            <span class="links__text clickable"
+              >Nova consulta na casa do paciente</span
+            >
+            <a href="" class="clickable"
+              ><img src="./assets/img/pinfabiconee.png" alt=""
+            /></a>
+          </div>
+          <div class="navbar__float__links">
+            <span class="links__text clickable">Nova consulta por vídeo</span>
+            <a href="" class="clickable"
+              ><img src="./assets/img/Camerafab.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <button id="navbar__float__button" onclick="openFloatMenu()">
+          <img
+            src="./assets/img/maisicone.png"
+            alt=""
+            class="navbar__float__icon"
+          />
+        </button>
+      </div>
       <div class="navbar__bottom">
         <a href="" class="navbar__buttons navbar__buttons--active">
           <img
@@ -50,6 +67,7 @@
         </a>
       </div>
     </div>
+    <div id="navbar__float__bg"></div>
     <header class="header">
       <img
         src="./assets/img/perfil-1.jpg"
@@ -307,5 +325,6 @@
       </div>
     </section>
     <div class="spacer-medium"></div>
+    <script src="script.js"></script>
   </body>
 </html>

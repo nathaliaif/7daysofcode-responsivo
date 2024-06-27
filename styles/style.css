@@ -28,21 +28,29 @@ body {
 .navbar {
   position: absolute;
   bottom: 0;
-  z-index: 1;
   width: 100%;
 }
 
-.navbar__plus {
+/* Float button */
+.navbar__float {
   position: fixed;
-  bottom: 5.7em;
-  left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   right: 1.5em;
-  width: 3.5em;
-  height: 3.5em;
-  border-radius: 30px;
+  bottom: 5.7em;
+  z-index: 99;
+}
+
+.navbar__float a,
+button {
+  width: 3.5rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 30px;
+  border: none;
   background-color: var(--blue);
   filter: drop-shadow(
     0 0 0.25rem color-mix(in srgb, var(--blue) 50%, transparent)
@@ -51,12 +59,44 @@ body {
 
   &:hover {
     background-color: var(--primary-hover);
+    cursor: pointer;
   }
 }
 
-.navbar__plus__icon {
+.navbar__float__icon {
   height: 1rem;
 }
+
+#navbar__float__menu {
+  display: none;
+}
+
+.navbar__float__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 1em;
+  margin-bottom: 0.8em;
+}
+
+.links__text {
+  font-size: 0.8rem;
+  background-color: var(--white);
+  padding: 0.3em 0.7em;
+  border-radius: 30px;
+}
+
+#navbar__float__bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+/* Navbar Bottom */
 
 .navbar__bottom {
   position: fixed;
@@ -69,6 +109,7 @@ body {
   justify-content: space-between;
   border-radius: 15px 15px 0 0;
   filter: drop-shadow(0 -1mm 1mm rgba(50, 50, 50, 0.1));
+  z-index: 1;
 }
 
 .navbar__buttons {
@@ -193,6 +234,11 @@ body {
   height: 2rem;
   width: 2rem;
   border-radius: 30px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--white);
+  }
 }
 
 .card__profile__chat-button img {
