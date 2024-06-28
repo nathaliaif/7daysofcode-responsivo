@@ -18,6 +18,7 @@ function openFloatMenu() {
     }
 }
   
+//Function for when menu is open
 function changesMenuActive(){
   navbarFloatMenu.style.display = "block";
   navbarFloatMenu.setAttribute("aria-hidden", "false");
@@ -31,6 +32,7 @@ function changesMenuActive(){
   gsap.to(bg, { duration: 0.4, width: "100%", height: "100%", right: 0, bottom: 0, ease: "power4.out", borderRadius: 0});
 }
 
+//Function for when menu is closed
 function changesMenuHidden(){
   gsap.to('.navbar__float__links', {duration: 0.4, opacity: 0, stagger: .03, y: '100%'});
   gsap.to('.navbar__float__icon', {duration: 0.4, rotation: 0});
