@@ -16,31 +16,6 @@
   </head>
   <body>
     <div class="navbar">
-      <div class="navbar__float">
-        <div id="navbar__float__menu" aria-hidden="true">
-          <div class="navbar__float__links">
-            <span class="links__text clickable"
-              >Nova consulta na casa do paciente</span
-            >
-            <a href="" class="clickable"
-              ><img src="./assets/img/pinfabiconee.png" alt=""
-            /></a>
-          </div>
-          <div class="navbar__float__links">
-            <span class="links__text clickable">Nova consulta por vídeo</span>
-            <a href="" class="clickable"
-              ><img src="./assets/img/Camerafab.png" alt=""
-            /></a>
-          </div>
-        </div>
-        <button id="navbar__float__button" onclick="openFloatMenu()">
-          <img
-            src="./assets/img/maisicone.png"
-            alt=""
-            class="navbar__float__icon"
-          />
-        </button>
-      </div>
       <div class="navbar__bottom">
         <a href="" class="navbar__buttons navbar__buttons--active">
           <img
@@ -70,350 +45,402 @@
           Menu
         </a>
       </div>
+      <div class="navbar__float">
+        <div id="navbar__float__menu" aria-hidden="true">
+          <div class="navbar__float__links">
+            <span class="links__text clickable"
+              >Nova consulta na casa do paciente</span
+            >
+            <a href="" class="clickable"
+              ><img src="./assets/img/pinfabiconee.png" alt=""
+            /></a>
+          </div>
+          <div class="navbar__float__links">
+            <span class="links__text clickable">Nova consulta por vídeo</span>
+            <a href="" class="clickable"
+              ><img src="./assets/img/Camerafab.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <button id="navbar__float__button" onclick="openFloatMenu()">
+          <img
+            src="./assets/img/maisicone.png"
+            alt=""
+            class="navbar__float__icon"
+          />
+        </button>
+      </div>
+      <div id="navbar__float__bg" aria-hidden="true"></div>
     </div>
-    <div id="navbar__float__bg" aria-hidden="true"></div>
-    <header class="header">
-      <img
-        src="./assets/img/perfil-1.jpg"
-        alt="Foto de perfil do usuário"
-        class="header__img"
-      />
-      <div>
-        <h1 class="header__user-name">Olá, Sônia</h1>
-        <p class="header__user-text">Mais 4 consultas hoje</p>
-      </div>
-    </header>
-    <section class="container">
-      <h2 class="container__day">Hoje</h2>
-      <div class="container__cards">
-        <div class="card">
-          <div class="card__header">
-            <div class="card__profile">
-              <img
-                src="./assets/img/perfil-2.jpg"
-                alt=""
-                class="card__profile__picture"
-              />
-              <div>
-                <p class="card__profile__name">Luciana Dias</p>
-                <div class="profile__info">
-                  <img
-                    src="./assets/img/Camera.png"
-                    alt=""
-                    class="profile__info__img"
-                  />
-                  <p class="profile__info__text">Consulta remota</p>
-                </div>
-              </div>
-            </div>
-            <a href="" class="card__profile__chat-button"
-              ><img src="./assets/img/chat1.png" alt=""
-            /></a>
-          </div>
-          <div class="card__main">
-            <p class="card__main__time">14:00 - 15:00 (1 hora)</p>
-            <div class="card__main__buttons">
-              <a href="" class="card__button card__button--orange"
-                >Ligar por vídeo</a
-              >
-              <a href="" class="card__button card__button--grey"
-                >Ligar por áudio</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__header">
-            <div class="card__profile">
-              <img
-                src="./assets/img/perfil-3.jpg"
-                alt=""
-                class="card__profile__picture"
-              />
-              <div>
-                <p class="card__profile__name">Larissa Santana</p>
-                <div class="profile__info">
-                  <img
-                    src="./assets/img/pin.png"
-                    alt=""
-                    class="profile__info__img"
-                  />
-                  <p class="profile__info__text">Consulta no local</p>
-                </div>
-              </div>
-            </div>
-            <a href="" class="card__profile__chat-button"
-              ><img src="./assets/img/chat1.png" alt=""
-            /></a>
-          </div>
-          <div class="card__main">
-            <p class="card__main__time">16:00 - 17:00 (1 hora)</p>
-            <div class="card__main__buttons">
-              <a href="" class="card__button card__button--blue"
-                >Ver endereço</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__header">
-            <div class="card__profile">
-              <img
-                src="./assets/img/perfil-4.jpg"
-                alt=""
-                class="card__profile__picture"
-              />
-              <div>
-                <p class="card__profile__name">Marcos Correia</p>
-                <div class="profile__info">
-                  <img
-                    src="./assets/img/Camera.png"
-                    alt=""
-                    class="profile__info__img"
-                  />
-                  <p class="profile__info__text">Consulta remota</p>
-                </div>
-              </div>
-            </div>
-            <a href="" class="card__profile__chat-button"
-              ><img src="./assets/img/chat1.png" alt=""
-            /></a>
-          </div>
-          <div class="card__main">
-            <p class="card__main__time">17:20 - 18:00 (40 minutos)</p>
-            <div class="card__main__buttons">
-              <a href="" class="card__button card__button--orange"
-                >Ligar por vídeo</a
-              >
-              <a href="" class="card__button card__button--grey"
-                >Ligar por áudio</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="container">
-      <h2 class="container__day">Amanhã</h2>
-      <div class="container__cards">
-        <div class="card">
-          <div class="card__header">
-            <div class="card__profile">
-              <img
-                src="./assets/img/perfil-5.jpg"
-                alt=""
-                class="card__profile__picture"
-              />
-              <div>
-                <p class="card__profile__name">Clara Lemos</p>
-                <div class="profile__info">
-                  <img
-                    src="./assets/img/pin.png"
-                    alt=""
-                    class="profile__info__img"
-                  />
-                  <p class="profile__info__text">Consulta no local</p>
-                </div>
-              </div>
-            </div>
-            <a href="" class="card__profile__chat-button"
-              ><img src="./assets/img/chat1.png" alt=""
-            /></a>
-          </div>
-          <div class="card__main">
-            <p class="card__main__time">18:00 - 19:00 (1 hora)</p>
-            <div class="card__main__buttons">
-              <a href="" class="card__button card__button--blue"
-                >Ver endereço</a
-              >
-            </div>
-          </div>
-        </div>
+    <div
+      id="navbar__side"
+      class="navbar__side"
+      onmouseover="toggleSidebar()"
+      onmouseout="toggleSidebar()"
+    >
+      <a href="" class="navbar__buttons navbar__buttons--active">
+        <img src="./assets/img/Calendarioicone.png" alt="Ícone de calendário" />
+        Consultas
+      </a>
 
-        <div class="card">
-          <div class="card__header">
-            <div class="card__profile">
-              <img
-                src="./assets/img/perfil-2.jpg"
-                alt=""
-                class="card__profile__picture"
-              />
-              <div>
-                <p class="card__profile__name">Luciana Dias</p>
-                <div class="profile__info">
-                  <img
-                    src="./assets/img/Camera.png"
-                    alt=""
-                    class="profile__info__img"
-                  />
-                  <p class="profile__info__text">Consulta remota</p>
-                </div>
-              </div>
-            </div>
-            <a href="" class="card__profile__chat-button"
-              ><img src="./assets/img/chat1.png" alt=""
-            /></a>
-          </div>
-          <div class="card__main">
-            <p class="card__main__time">14:00 - 15:00 (1 hora)</p>
-            <div class="card__main__buttons">
-              <a href="" class="card__button card__button--orange"
-                >Ligar por vídeo</a
-              >
-              <a href="" class="card__button card__button--grey"
-                >Ligar por áudio</a
-              >
-            </div>
-          </div>
-        </div>
+      <a href="" class="navbar__buttons">
+        <img src="./assets/img/clientes icone.png" alt="Ícone de clientes" />
+        Clientes
+      </a>
+      <a href="" class="navbar__buttons">
+        <img src="./assets/img/relatorios icone.png" alt="Ícone de gráfico" />
+        Relatórios
+      </a>
 
-        <div class="card">
-          <div class="card__header">
-            <div class="card__profile">
-              <img
-                src="./assets/img/perfil-4.jpg"
-                alt=""
-                class="card__profile__picture"
-              />
-              <div>
-                <p class="card__profile__name">Marcos Correia</p>
-                <div class="profile__info">
-                  <img
-                    src="./assets/img/Camera.png"
-                    alt=""
-                    class="profile__info__img"
-                  />
-                  <p class="profile__info__text">Consulta remota</p>
+      <a href="" class="navbar__buttons">
+        <img src="./assets/img/menu icone.png" alt="Ícone de menu hamburguer" />
+        Menu
+      </a>
+    </div>
+    <div id="main">
+      <header class="header">
+        <img
+          src="./assets/img/perfil-1.jpg"
+          alt="Foto de perfil do usuário"
+          class="header__img"
+        />
+        <div>
+          <h1 class="header__user-name">Olá, Sônia</h1>
+          <p class="header__user-text">Mais 4 consultas hoje</p>
+        </div>
+      </header>
+      <section class="container">
+        <h2 class="container__day">Hoje</h2>
+        <div class="container__cards">
+          <div class="card">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="./assets/img/perfil-2.jpg"
+                  alt=""
+                  class="card__profile__picture"
+                />
+                <div>
+                  <p class="card__profile__name">Luciana Dias</p>
+                  <div class="profile__info">
+                    <img
+                      src="./assets/img/Camera.png"
+                      alt=""
+                      class="profile__info__img"
+                    />
+                    <p class="profile__info__text">Consulta remota</p>
+                  </div>
                 </div>
               </div>
+              <a href="" class="card__profile__chat-button"
+                ><img src="./assets/img/chat1.png" alt=""
+              /></a>
             </div>
-            <a href="" class="card__profile__chat-button"
-              ><img src="./assets/img/chat1.png" alt=""
-            /></a>
+            <div class="card__main">
+              <p class="card__main__time">14:00 - 15:00 (1 hora)</p>
+              <div class="card__main__buttons">
+                <a href="" class="card__button card__button--orange"
+                  >Ligar por vídeo</a
+                >
+                <a href="" class="card__button card__button--grey"
+                  >Ligar por áudio</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="card__main">
-            <p class="card__main__time">17:20 - 18:00 (40 minutos)</p>
-            <div class="card__main__buttons">
-              <a href="" class="card__button card__button--orange"
-                >Ligar por vídeo</a
-              >
-              <a href="" class="card__button card__button--grey"
-                >Ligar por áudio</a
-              >
+          <div class="card">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="./assets/img/perfil-3.jpg"
+                  alt=""
+                  class="card__profile__picture"
+                />
+                <div>
+                  <p class="card__profile__name">Larissa Santana</p>
+                  <div class="profile__info">
+                    <img
+                      src="./assets/img/pin.png"
+                      alt=""
+                      class="profile__info__img"
+                    />
+                    <p class="profile__info__text">Consulta no local</p>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="card__profile__chat-button"
+                ><img src="./assets/img/chat1.png" alt=""
+              /></a>
+            </div>
+            <div class="card__main">
+              <p class="card__main__time">16:00 - 17:00 (1 hora)</p>
+              <div class="card__main__buttons">
+                <a href="" class="card__button card__button--blue"
+                  >Ver endereço</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="./assets/img/perfil-4.jpg"
+                  alt=""
+                  class="card__profile__picture"
+                />
+                <div>
+                  <p class="card__profile__name">Marcos Correia</p>
+                  <div class="profile__info">
+                    <img
+                      src="./assets/img/Camera.png"
+                      alt=""
+                      class="profile__info__img"
+                    />
+                    <p class="profile__info__text">Consulta remota</p>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="card__profile__chat-button"
+                ><img src="./assets/img/chat1.png" alt=""
+              /></a>
+            </div>
+            <div class="card__main">
+              <p class="card__main__time">17:20 - 18:00 (40 minutos)</p>
+              <div class="card__main__buttons">
+                <a href="" class="card__button card__button--orange"
+                  >Ligar por vídeo</a
+                >
+                <a href="" class="card__button card__button--grey"
+                  >Ligar por áudio</a
+                >
+              </div>
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card__header">
-            <div class="card__profile">
-              <img
-                src="./assets/img/perfil-3.jpg"
-                alt=""
-                class="card__profile__picture"
-              />
-              <div>
-                <p class="card__profile__name">Larissa Santana</p>
-                <div class="profile__info">
-                  <img
-                    src="./assets/img/pin.png"
-                    alt=""
-                    class="profile__info__img"
-                  />
-                  <p class="profile__info__text">Consulta no local</p>
+      </section>
+      <section class="container">
+        <h2 class="container__day">Amanhã</h2>
+        <div class="container__cards">
+          <div class="card">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="./assets/img/perfil-5.jpg"
+                  alt=""
+                  class="card__profile__picture"
+                />
+                <div>
+                  <p class="card__profile__name">Clara Lemos</p>
+                  <div class="profile__info">
+                    <img
+                      src="./assets/img/pin.png"
+                      alt=""
+                      class="profile__info__img"
+                    />
+                    <p class="profile__info__text">Consulta no local</p>
+                  </div>
                 </div>
               </div>
+              <a href="" class="card__profile__chat-button"
+                ><img src="./assets/img/chat1.png" alt=""
+              /></a>
             </div>
-            <a href="" class="card__profile__chat-button"
-              ><img src="./assets/img/chat1.png" alt=""
-            /></a>
-          </div>
-          <div class="card__main">
-            <p class="card__main__time">16:00 - 17:00 (1 hora)</p>
-            <div class="card__main__buttons">
-              <a href="" class="card__button card__button--blue"
-                >Ver endereço</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="container">
-      <h2 class="container__day">Quarta-feira</h2>
-      <div class="container__cards">
-        <div class="card">
-          <div class="card__header">
-            <div class="card__profile">
-              <img
-                src="./assets/img/perfil-2.jpg"
-                alt=""
-                class="card__profile__picture"
-              />
-              <div>
-                <p class="card__profile__name">Luciana Dias</p>
-                <div class="profile__info">
-                  <img
-                    src="./assets/img/Camera.png"
-                    alt=""
-                    class="profile__info__img"
-                  />
-                  <p class="profile__info__text">Consulta remota</p>
-                </div>
+            <div class="card__main">
+              <p class="card__main__time">18:00 - 19:00 (1 hora)</p>
+              <div class="card__main__buttons">
+                <a href="" class="card__button card__button--blue"
+                  >Ver endereço</a
+                >
               </div>
             </div>
-            <a href="" class="card__profile__chat-button"
-              ><img src="./assets/img/chat1.png" alt=""
-            /></a>
           </div>
-          <div class="card__main">
-            <p class="card__main__time">14:00 - 15:00 (1 hora)</p>
-            <div class="card__main__buttons">
-              <a href="" class="card__button card__button--orange"
-                >Ligar por vídeo</a
-              >
-              <a href="" class="card__button card__button--grey"
-                >Ligar por áudio</a
-              >
-            </div>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="card__header">
-            <div class="card__profile">
-              <img
-                src="./assets/img/perfil-5.jpg"
-                alt=""
-                class="card__profile__picture"
-              />
-              <div>
-                <p class="card__profile__name">Clara Lemos</p>
-                <div class="profile__info">
-                  <img
-                    src="./assets/img/pin.png"
-                    alt=""
-                    class="profile__info__img"
-                  />
-                  <p class="profile__info__text">Consulta no local</p>
+          <div class="card">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="./assets/img/perfil-2.jpg"
+                  alt=""
+                  class="card__profile__picture"
+                />
+                <div>
+                  <p class="card__profile__name">Luciana Dias</p>
+                  <div class="profile__info">
+                    <img
+                      src="./assets/img/Camera.png"
+                      alt=""
+                      class="profile__info__img"
+                    />
+                    <p class="profile__info__text">Consulta remota</p>
+                  </div>
                 </div>
               </div>
+              <a href="" class="card__profile__chat-button"
+                ><img src="./assets/img/chat1.png" alt=""
+              /></a>
             </div>
-            <a href="" class="card__profile__chat-button"
-              ><img src="./assets/img/chat1.png" alt=""
-            /></a>
+            <div class="card__main">
+              <p class="card__main__time">14:00 - 15:00 (1 hora)</p>
+              <div class="card__main__buttons">
+                <a href="" class="card__button card__button--orange"
+                  >Ligar por vídeo</a
+                >
+                <a href="" class="card__button card__button--grey"
+                  >Ligar por áudio</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="card__main">
-            <p class="card__main__time">18:00 - 19:00 (1 hora)</p>
-            <div class="card__main__buttons">
-              <a href="" class="card__button card__button--blue"
-                >Ver endereço</a
-              >
+
+          <div class="card">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="./assets/img/perfil-4.jpg"
+                  alt=""
+                  class="card__profile__picture"
+                />
+                <div>
+                  <p class="card__profile__name">Marcos Correia</p>
+                  <div class="profile__info">
+                    <img
+                      src="./assets/img/Camera.png"
+                      alt=""
+                      class="profile__info__img"
+                    />
+                    <p class="profile__info__text">Consulta remota</p>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="card__profile__chat-button"
+                ><img src="./assets/img/chat1.png" alt=""
+              /></a>
+            </div>
+            <div class="card__main">
+              <p class="card__main__time">17:20 - 18:00 (40 minutos)</p>
+              <div class="card__main__buttons">
+                <a href="" class="card__button card__button--orange"
+                  >Ligar por vídeo</a
+                >
+                <a href="" class="card__button card__button--grey"
+                  >Ligar por áudio</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="./assets/img/perfil-3.jpg"
+                  alt=""
+                  class="card__profile__picture"
+                />
+                <div>
+                  <p class="card__profile__name">Larissa Santana</p>
+                  <div class="profile__info">
+                    <img
+                      src="./assets/img/pin.png"
+                      alt=""
+                      class="profile__info__img"
+                    />
+                    <p class="profile__info__text">Consulta no local</p>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="card__profile__chat-button"
+                ><img src="./assets/img/chat1.png" alt=""
+              /></a>
+            </div>
+            <div class="card__main">
+              <p class="card__main__time">16:00 - 17:00 (1 hora)</p>
+              <div class="card__main__buttons">
+                <a href="" class="card__button card__button--blue"
+                  >Ver endereço</a
+                >
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <div class="spacer-medium"></div>
+      </section>
+      <section class="container">
+        <h2 class="container__day">Quarta-feira</h2>
+        <div class="container__cards">
+          <div class="card">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="./assets/img/perfil-2.jpg"
+                  alt=""
+                  class="card__profile__picture"
+                />
+                <div>
+                  <p class="card__profile__name">Luciana Dias</p>
+                  <div class="profile__info">
+                    <img
+                      src="./assets/img/Camera.png"
+                      alt=""
+                      class="profile__info__img"
+                    />
+                    <p class="profile__info__text">Consulta remota</p>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="card__profile__chat-button"
+                ><img src="./assets/img/chat1.png" alt=""
+              /></a>
+            </div>
+            <div class="card__main">
+              <p class="card__main__time">14:00 - 15:00 (1 hora)</p>
+              <div class="card__main__buttons">
+                <a href="" class="card__button card__button--orange"
+                  >Ligar por vídeo</a
+                >
+                <a href="" class="card__button card__button--grey"
+                  >Ligar por áudio</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="./assets/img/perfil-5.jpg"
+                  alt=""
+                  class="card__profile__picture"
+                />
+                <div>
+                  <p class="card__profile__name">Clara Lemos</p>
+                  <div class="profile__info">
+                    <img
+                      src="./assets/img/pin.png"
+                      alt=""
+                      class="profile__info__img"
+                    />
+                    <p class="profile__info__text">Consulta no local</p>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="card__profile__chat-button"
+                ><img src="./assets/img/chat1.png" alt=""
+              /></a>
+            </div>
+            <div class="card__main">
+              <p class="card__main__time">18:00 - 19:00 (1 hora)</p>
+              <div class="card__main__buttons">
+                <a href="" class="card__button card__button--blue"
+                  >Ver endereço</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacer-medium"></div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

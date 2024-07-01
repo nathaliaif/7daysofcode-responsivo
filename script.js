@@ -1,3 +1,4 @@
+// Float button
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the float button */
 const navbarFloatMenu = document.getElementById("navbar__float__menu");
 const navbarFloatButton = document.getElementById("navbar__float__button");
@@ -28,7 +29,6 @@ function changesMenuActive(){
   //Opening animation
   gsap.fromTo('.navbar__float__links', { opacity: 0, y: '100%' }, { duration: 0.6, opacity: 1, stagger: 0.06, y: '0%' });
   gsap.to('.navbar__float__icon', {duration: 0.4, rotation: 45});
-  // gsap.fromTo(bg, { y: '100%'}, { duration: 0.6, y: '0%', ease: 'power1.out'});
   gsap.to(bg, { duration: 0.4, width: "100%", height: "100%", right: 0, bottom: 0, ease: "power4.out", borderRadius: 0});
 }
 
@@ -39,7 +39,6 @@ function changesMenuHidden(){
 
   // gsap.set(bg, { width: "auto", height: "auto", right: "auto", bottom: "auto", borderRadius: "50%", ease: "power1.out" });
   gsap.set(bg, {duration: 0.4, borderRadius: "100%", width: '3.5rem', height: '3.5rem', right: '1.5em', bottom: '5.7em', ease: "power1.out"})
-  // gsap.set('#navbar__float__bg', {duration: 0.4, borderRadius: "100%", width: 'auto', height: 'auto', right: 'auto', bottom: 'auto', ease: "power1.out"})
   
   //Delay hiding the elements to allow animation to complete
   setTimeout(() => {
@@ -48,3 +47,20 @@ function changesMenuHidden(){
     bg.style.display = "none";
    }, 500); //Delay duration
  }
+
+//  Side Navbar
+let mini = true;
+
+function toggleSidebar(){
+  if (mini){
+    document.getElementById('navbar__side').style.width = 'auto';
+    document.getElementById('navbar__side').style.padding = '1em 2em 1em 1.3em';
+    document.getElementById('main').style.marginLeft = '10em';
+    mini = false;
+  } else {
+    document.getElementById('navbar__side').style.width = '4em';
+    document.getElementById('navbar__side').style.padding = '1em 1.5em 1em 1.3em';
+    document.getElementById('main').style.marginLeft = '4em';
+    mini = true;
+  }
+}

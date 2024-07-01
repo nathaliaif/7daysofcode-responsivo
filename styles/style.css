@@ -136,6 +136,12 @@ button {
   opacity: 1;
 }
 
+/* Sidebar Lateral */
+
+.navbar__side {
+  display: none;
+}
+
 /* Header */
 
 .header {
@@ -356,6 +362,62 @@ button {
 }
 
 @media screen and (min-width: 1100px) {
+  /* Navbar */
+
+  .navbar__float {
+    display: none;
+  }
+
+  #navbar__float__bg {
+    display: none;
+  }
+
+  .navbar__bottom {
+    display: none;
+  }
+
+  #navbar__side {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2em;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 4em;
+    padding: 1em 1.5em 1em 1.3em;
+    border-radius: 0 15px 15px 0;
+    background-color: var(--white);
+    filter: drop-shadow(0 -1mm 1mm rgba(50, 50, 50, 0.1));
+    z-index: 1;
+    transition: 0.5s;
+    /* transition: width 1s ease-in-out; */
+    overflow-x: hidden; //Will hide the text
+    white-space: nowrap; //Will prevent the text from wrapping to the next line, even if its larger than the width of the sidebar
+  }
+
+  .navbar__side img {
+    vertical-align: middle;
+    height: 24px;
+    width: 22px;
+    object-fit: contain;
+  }
+
+  .navbar__buttons {
+    flex-direction: row;
+    row-gap: 0.3em;
+    column-gap: 2em;
+    opacity: 1;
+    transition: 0.3s;
+  }
+
+  .navbar__buttons:hover {
+    color: var(--blue);
+  }
+
+  /* Header */
+
   .header {
     padding: 2em 1.5em 1em 3em;
   }
@@ -372,6 +434,15 @@ button {
   .header__user-text {
     font-size: 1.1rem;
   }
+
+  /* Main Container */
+
+  #main {
+    margin-left: 4em;
+    transition: margin-left 0.5s;
+  }
+
+  /* Cards Sections */
 
   .container {
     padding: 1.5em 4em;
