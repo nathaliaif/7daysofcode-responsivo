@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
     <script
       src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
       defer
@@ -45,7 +46,7 @@
           Menu
         </a>
       </div>
-      <div class="navbar__float">
+      <div class="navbar__float navbar__float-mobile">
         <div id="navbar__float__menu" aria-hidden="true">
           <div class="navbar__float__links">
             <span class="links__text clickable"
@@ -62,7 +63,16 @@
             /></a>
           </div>
         </div>
-        <button id="navbar__float__button" onclick="openFloatMenu()">
+        <button id="navbar__float__button" class="float__button" onclick="openFloatMenu()">
+          <img
+            src="./assets/img/maisicone.png"
+            alt=""
+            class="navbar__float__icon"
+          />
+        </button>
+      </div>
+      <div class="navbar__float navbar__float-form">
+        <button id="navbar__float__button" class="float__button" onclick="openFloatModal()">
           <img
             src="./assets/img/maisicone.png"
             alt=""
@@ -362,6 +372,39 @@
               </div>
             </div>
           </div>
+          <div class="card">
+            <div class="card__header">
+              <div class="card__profile">
+                <img
+                  src="./assets/img/perfil-3.jpg"
+                  alt=""
+                  class="card__profile__picture"
+                />
+                <div>
+                  <p class="card__profile__name">Larissa Santana</p>
+                  <div class="profile__info">
+                    <img
+                      src="./assets/img/pin.png"
+                      alt=""
+                      class="profile__info__img"
+                    />
+                    <p class="profile__info__text">Consulta no local</p>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="card__profile__chat-button"
+                ><img src="./assets/img/chat1.png" alt=""
+              /></a>
+            </div>
+            <div class="card__main">
+              <p class="card__main__time">16:00 - 17:00 (1 hora)</p>
+              <div class="card__main__buttons">
+                <a href="" class="card__button card__button--blue"
+                  >Ver endereço</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="container">
@@ -455,6 +498,33 @@
         
       </section>
       <div class="spacer-medium"></div>
+      <footer>
+        <div class="footer__main">
+          <p class="footer__logo">Oswald</p>
+          <div class="footer__topics">
+            <li class="footer__list">
+              <h3>Sobre nós</h3>
+              <ul><a href="">Nosso time</a></ul>
+              <ul><a href="">Entre em contato</a></ul>
+              <ul><a href="">Referencias</a></ul>
+              <ul><a href="">Publicações</a></ul>
+            </li>
+            <li class="footer__list">
+              <h3>Serviços e Produtos</h3>
+              <ul><a href="">Serviços</a></ul>
+              <ul><a href="">Produtos</a></ul>
+            </li>
+            <li class="footer__list">
+              <h3>Carreira</h3>
+              <ul><a href="">Vagas</a></ul>
+            </li>
+          </div>
+        </div>
+        <div class="footer__rights">
+          <p>Todos os direitos reservados.</p>
+          <p>© 2024 <a href="https://github.com/nathaliaif">Nathalia Irokawa</a></p>
+        </div>
+      </footer>
     </div>
     <script src="script.js"></script>
   </body>
