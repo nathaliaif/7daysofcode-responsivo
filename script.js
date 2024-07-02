@@ -49,18 +49,17 @@ function changesMenuHidden(){
  }
 
 //  Side Navbar
+
 let mini = true;
 
 function toggleSidebar(){
+  const navbarSide = document.getElementById('navbar__side');
+
   if (mini){
-    document.getElementById('navbar__side').style.width = 'auto';
-    document.getElementById('navbar__side').style.padding = '1em 2em 1em 1.3em';
-    document.getElementById('main').style.marginLeft = '10em';
+    navbarSide.classList.add('expanded');
     mini = false;
   } else {
-    document.getElementById('navbar__side').style.width = '4em';
-    document.getElementById('navbar__side').style.padding = '1em 1.5em 1em 1.3em';
-    document.getElementById('main').style.marginLeft = '4em';
+    navbarSide.classList.remove('expanded');
     mini = true;
   }
 }

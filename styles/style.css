@@ -5,6 +5,7 @@
   --white: #ffffff;
   --primary-text: #464646;
   --secondary-text: #a3a3a3;
+  --light-grey: #898989;
 
   /* Estados */
   --primary-hover: #4786f0;
@@ -138,7 +139,7 @@ button {
 
 /* Sidebar Lateral */
 
-.navbar__side {
+#navbar__side {
   display: none;
 }
 
@@ -331,6 +332,10 @@ button {
   height: 5rem;
 }
 
+.form-container {
+  display: none;
+}
+
 @media screen and (min-width: 700px) {
   .navbar__bottom {
     padding: 0.8em 0;
@@ -386,29 +391,53 @@ button {
     left: 0;
     height: 100vh;
     width: 4em;
-    padding: 1em 1.5em 1em 1.3em;
+    padding: 1em 1.3em 1em 1.3em;
     border-radius: 0 15px 15px 0;
     background-color: var(--white);
     filter: drop-shadow(0 -1mm 1mm rgba(50, 50, 50, 0.1));
     z-index: 1;
-    transition: 0.5s;
-    /* transition: width 1s ease-in-out; */
-    overflow-x: hidden; //Will hide the text
-    white-space: nowrap; //Will prevent the text from wrapping to the next line, even if its larger than the width of the sidebar
+    transition: width 0.5s, padding 0.5s;
+    overflow-x: hidden; /* Will hide the text */
+    white-space: nowrap; /* Will prevent the text from wrapping to the next line, even if its larger than the width of the sidebar */
+    & ~ #main {
+      margin-left: 3.5em;
+      transition: margin-left 0.5s;
+    }
   }
 
-  .navbar__side img {
-    vertical-align: middle;
-    height: 24px;
-    width: 22px;
-    object-fit: contain;
+  #navbar__side.expanded {
+    width: 10em;
+    padding: 1em 1.7em 1em 1.3em;
+    & ~ #main {
+      margin-left: 9em;
+      transition: margin-left 0.5s;
+    }
+  }
+
+  #navbar__side.expanded .navbar__buttons span {
+    display: inline-block;
   }
 
   .navbar__buttons {
+    display: flex;
+    align-items: center;
     flex-direction: row;
     row-gap: 0.3em;
-    column-gap: 2em;
+    column-gap: 1em;
     opacity: 1;
+  }
+
+  .navbar__buttons img {
+    align-self: center;
+    min-width: 20px;
+    height: 24px;
+    width: 20px;
+    object-fit: scale-down;
+    margin-right: 0.5em; /* Added spacing to separate image and text */
+  }
+
+  .navbar__buttons span {
+    display: none; /* Hide text initially */
     transition: 0.3s;
   }
 
@@ -437,10 +466,10 @@ button {
 
   /* Main Container */
 
-  #main {
+  /* #main {
     margin-left: 4em;
     transition: margin-left 0.5s;
-  }
+  } */
 
   /* Cards Sections */
 
@@ -466,5 +495,15 @@ button {
   .card__main {
     row-gap: 0.7em;
     margin-top: 0.5em;
+  }
+
+  /* Form */
+  .form-container {
+    display: block;
+  }
+
+  label {
+    font-size: 1rem;
+    color: var(--light-grey);
   }
 }
