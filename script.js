@@ -11,12 +11,12 @@ document.addEventListener('click', (event) => {
   }
  });
 
-function openFloatMenu() {
-    if (navbarFloatMenu.style.display === 'block') {
-        changesMenuHidden();
-    } else {
-        changesMenuActive();
-    }
+navbarFloatButton.onclick = () => {
+  if (navbarFloatMenu.style.display === 'block') {
+    changesMenuHidden();
+  } else {
+    changesMenuActive();
+  }
 }
   
 //Function for when menu is open
@@ -51,6 +51,8 @@ function changesMenuHidden(){
 
 const buttonFloatModal = document.getElementById('modal__button')
 const formModal = document.getElementById('form-modal');
+
+buttonFloatModal.onclick = toggleFormModal;
 
 function toggleFormModal(){
   if (formModal.style.display === 'block') {
