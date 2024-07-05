@@ -80,16 +80,23 @@ window.onclick = function(event) {
 }
 
 // ---- Side Navbar ----
-let mini = true;
+const navbarSide = document.getElementById('navbar__side');
 
-function toggleSidebar(){
-  const navbarSide = document.getElementById('navbar__side');
+navbarSide.addEventListener('mouseover', toggleSidebar);
+navbarSide.addEventListener('mouseout', toggleSidebar);
 
-  if (mini){
-    navbarSide.classList.add('expanded');
-    mini = false;
-  } else {
-    navbarSide.classList.remove('expanded');
-    mini = true;
-  }
+function toggleSidebar(){ 
+  navbarSide.classList.toggle('expanded');
+  // .toggle: if the class is present, it removes it; if the class is not present, it adds it
 }
+
+
+// let mini = true;
+  // if (mini){
+  //       navbarSide.classList.add('expanded');
+  //       mini = false;
+  //     } else {
+  //       navbarSide.classList.remove('expanded');
+  //       mini = true;
+  //     }
+
