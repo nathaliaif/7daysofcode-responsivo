@@ -9,7 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
       defer
@@ -63,7 +66,11 @@
             /></a>
           </div>
         </div>
-        <button id="navbar__float__button" class="float__button" onclick="openFloatMenu()">
+        <button
+          id="navbar__float__button"
+          class="float__button"
+          onclick="openFloatMenu()"
+        >
           <img
             src="./assets/img/maisicone.png"
             alt=""
@@ -71,14 +78,84 @@
           />
         </button>
       </div>
-      <div class="navbar__float navbar__float-form">
-        <button id="navbar__float__button" class="float__button" onclick="openFloatModal()">
+      <div class="navbar__float float__button-modal">
+        <button
+          id="modal__button"
+          class="float__button"
+          onclick="openFormModal()"
+        >
           <img
             src="./assets/img/maisicone.png"
             alt=""
-            class="navbar__float__icon"
+            class="button__float__icon"
           />
         </button>
+      </div>
+      <div id="form-modal" class="modal">
+        <div class="modal__content">
+          <!-- <span class="close">&times;</span> -->
+          <h2 class="heading">Informações gerais</h2>
+          <p>Primeiramente, nos fale um pouco sobre você.</p>
+          <form action="" class="modal__form">
+            <div class="form__secao">
+              <div>
+                <label for="fname">Primeiro nome</label><br />
+                <input
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  placeholder="Insira primeiro nome"
+                  class="input__text"
+                /><br />
+              </div>
+              <div>
+                <label for="lname">Segundo nome</label><br />
+                <input
+                  type="text"
+                  id="lname"
+                  name="lname"
+                  placeholder="Insira segundo nome"
+                  class="input__text"
+                />
+              </div>
+            </div>
+            <h2 class="sub-heading">Informações de Contato</h2>
+            <div class="form__secao">
+              <div>
+                <label for="lname">Email</label><br />
+                <input
+                  type="email"
+                  id="lname"
+                  name="lname"
+                  placeholder="Insira seu email"
+                  class="input__text"
+                />
+              </div>
+              <div>
+                <label for="lname">Telefone</label><br />
+                <input
+                  type="email"
+                  id="lname"
+                  name="lname"
+                  placeholder="(xx) xxxxx-xxxx"
+                  class="input__text"
+                />
+              </div>
+            </div>
+            <div class="form__secao form__buttons">
+              <input
+                type="submit"
+                value="Marcar consulta"
+                class="card__button card__button--blue"
+              />
+              <input
+                type="button"
+                value="Cancelar"
+                class="card__button card__button--grey"
+              />
+            </div>
+          </form>
+        </div>
       </div>
       <div id="navbar__float__bg" aria-hidden="true"></div>
     </div>
@@ -483,20 +560,6 @@
         </div>
       </section>
 
-      <section class="container form-container">
-        <h2 class="heading">Informações pessoais</h2>
-        <p>Primeiramente, nos fale um pouco sobre você.</p>
-        <form action="">
-          <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname"><br>
-          <label for="lname">Last name:</label><br>
-          <input type="text" id="lname" name="lname">
-          <label for="lname">Email:</label><br>
-          <input type="text" id="lname" name="lname">
-        </form>
-      </section>
-        
-      </section>
       <div class="spacer-medium"></div>
       <footer>
         <div class="footer__main">
@@ -504,25 +567,41 @@
           <div class="footer__topics">
             <li class="footer__list">
               <h3>Sobre nós</h3>
-              <ul><a href="">Nosso time</a></ul>
-              <ul><a href="">Entre em contato</a></ul>
-              <ul><a href="">Referencias</a></ul>
-              <ul><a href="">Publicações</a></ul>
+              <ul>
+                <a href="">Nosso time</a>
+              </ul>
+              <ul>
+                <a href="">Entre em contato</a>
+              </ul>
+              <ul>
+                <a href="">Referencias</a>
+              </ul>
+              <ul>
+                <a href="">Publicações</a>
+              </ul>
             </li>
             <li class="footer__list">
               <h3>Serviços e Produtos</h3>
-              <ul><a href="">Serviços</a></ul>
-              <ul><a href="">Produtos</a></ul>
+              <ul>
+                <a href="">Serviços</a>
+              </ul>
+              <ul>
+                <a href="">Produtos</a>
+              </ul>
             </li>
             <li class="footer__list">
               <h3>Carreira</h3>
-              <ul><a href="">Vagas</a></ul>
+              <ul>
+                <a href="">Vagas</a>
+              </ul>
             </li>
           </div>
         </div>
         <div class="footer__rights">
           <p>Todos os direitos reservados.</p>
-          <p>© 2024 <a href="https://github.com/nathaliaif">Nathalia Irokawa</a></p>
+          <p>
+            © 2024 <a href="https://github.com/nathaliaif">Nathalia Irokawa</a>
+          </p>
         </div>
       </footer>
     </div>
