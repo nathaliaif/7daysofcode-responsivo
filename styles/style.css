@@ -604,7 +604,7 @@ footer {
   /* ---- Modal ---- */
 
   .modal {
-    display: none;
+    display: nonw;
     position: fixed;
     z-index: 2;
     left: 0;
@@ -631,7 +631,6 @@ footer {
     /* min-width: 50%; */
     max-width: 80%;
     background-color: #fff;
-    transform: translateY(-100%); //Starts above the viewport
   }
 
   .modal__content h2 {

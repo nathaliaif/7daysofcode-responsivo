@@ -18,19 +18,6 @@ function openFloatMenu() {
         changesMenuActive();
     }
 }
-
-//Animation for when Float Button opens
-function buttonFloatOpen(){
-  gsap.to('.navbar__float__icon', {duration: 0.4, rotation: 45});
-  gsap.to(bg, { duration: 0.4, width: '100%', height: '100%', right: 0, bottom: 0, ease: 'power4.out', borderRadius: 0});
-}
-
-//Animation for when Float Button closes
-function buttonFloatClose(){
-  gsap.to('.navbar__float__icon', {duration: 0.4, rotation: 0});
-  // gsap.set(bg, { width: "auto", height: "auto", right: "auto", bottom: "auto", borderRadius: "50%", ease: "power1.out" });
-  gsap.set(bg, {duration: 0.4, borderRadius: '100%', width: '3.5rem', height: '3.5rem', right: '1.5em', bottom: '5.7em', ease: 'power1.out'})
-}
   
 //Function for when menu is open
 function changesMenuActive(){
@@ -40,13 +27,16 @@ function changesMenuActive(){
   
   //Opening animation
   gsap.fromTo('.navbar__float__links', { opacity: 0, y: '100%' }, { duration: 0.6, opacity: 1, stagger: 0.06, y: '0%' });
-  buttonFloatOpen();
+  gsap.to('.navbar__float__icon', {duration: 0.4, rotation: 45});
+  gsap.to(bg, { duration: 0.4, width: '100%', height: '100%', right: 0, bottom: 0, ease: 'power4.out', borderRadius: 0});
 }
 
 //Function for when menu is closed
 function changesMenuHidden(){
   gsap.to('.navbar__float__links', {duration: 0.4, opacity: 0, stagger: .03, y: '100%'});
-  buttonFloatClose();
+  gsap.to('.navbar__float__icon', {duration: 0.4, rotation: 0});
+  gsap.set(bg, {duration: 0.3, borderRadius: '100%', width: '3.5rem', height: '3.5rem', right: '1.5em', bottom: '5.7em', ease: 'power1.out'})
+  
   
   //Delay hiding the elements to allow animation to complete
   setTimeout(() => {
@@ -62,11 +52,11 @@ function changesMenuHidden(){
 const buttonFloatModal = document.getElementById('modal__button')
 const formModal = document.getElementById('form-modal');
 
-function openFormModal(){
+function toggleFormModal(){
   if (formModal.style.display === 'block') {
     gsap.to('.button__float__icon', {duration: 0.4, rotation: 0});
     gsap.to('.modal__content', {duration: 0.5, y: '100%', ease: 'power2.out'});
-    gsap.to('.modal', {duration: 0.5, opacity: 0});
+    gsap.to('.modal', {duration: 0.5, autoAlpha: 0});
     
     setTimeout(() => {
       formModal.style.display = 'none';
@@ -76,15 +66,14 @@ function openFormModal(){
     formModal.style.display = 'block';
     gsap.to('.button__float__icon', {duration: 0.4, rotation: 45});
     gsap.fromTo('.modal__content', {y: '-100%'}, {duration: 0.5, y: '0%',  ease: 'power2.out'});
-    gsap.fromTo('.modal', {opacity: 0}, {duration: 0.5, opacity: 1});
+    gsap.fromTo('.modal', {autoAlpha: 0}, {duration: 0.5, autoAlpha: 1});
   }
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == formModal) {
-    formModal.style.display = 'none';
-    gsap.to('.button__float__icon', {duration: 0.4, rotation: 0});
+    toggleFormModal();
   }
 }
 
